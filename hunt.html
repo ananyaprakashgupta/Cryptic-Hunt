@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Level 0</title>
+  <style>
+    /* CSS styling goes here */
+    body {
+      font-family: Lexend;
+      background-color: #202124;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      font-family: Lexend;
+      color: #6BB0E1;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    
+    .clue {
+      margin-bottom: 20px;
+      color: #6BB0E1;
+      text-align: center;
+    }
+    
+    .clue-text {
+      font-size: 18px;
+      color:#6BB0E1;
+      text-align: centre;
+      margin-bottom: 10px;
+    }
+    
+    .answer-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    
+    .submit-button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #6BB0E1;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    .result {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .success {
+      color: #6BB0E1;
+    }
+    
+    .failure {
+      color: RED;
+    }
+  </style>
+</head>
+<body>
+
+    <h1>CRYPTIC HUNT-LEVEL 0</h1>
+    
+    <div class="clue">
+      <p class="clue-text">CLUE:</p>
+      <p>xnun57</p>
+    </div>
+  <div class="container">
+<center><img src="C:\Users\new\Downloads\level 0.jpeg" ></center>
+    
+    <div>
+      <input type="text" class="answer-input" placeholder="Enter your answer...">
+      <button class="submit-button" onclick="checkAnswer()">Submit</button>
+    </div>
+    
+    <div class="result" id="result">
+    </div>
+  </div>
+
+  <script>
+    // JavaScript logic goes here
+    function checkAnswer() {
+      var answer = document.querySelector('.answer-input').value.toLowerCase();
+      var result = document.querySelector('#result');
+      
+      // Check if the answer is correct
+      if (answer === '140') {
+        result.innerHTML = '<p class="success">Move onto level 1!</p>';
+      } else {
+        result.innerHTML = '<p class="failure">Incorrect answer. Try again!</p>';
+      }
+    }
+  </script>
+</body>
+</html>
